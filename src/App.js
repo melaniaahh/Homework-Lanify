@@ -1,20 +1,12 @@
 import logo from './logo.svg';
-import data from "./data/single-sample";
+import data from "./data";
+import Track from "./components/Track";
 
 function App() {
   return (
     <section>
       <div className="container">
-        <div className="song">
-          <div className="song-img">
-            <img src={data.album.images [0].url} className="App-logo" alt="logo" />
-          </div>
-          <div className="song-desc">
-            <p>{data.album.name}</p>
-            <p>{data.artists[0].name}</p>
-            <button>Select</button>
-          </div>
-        </div>
+        <Track url={data.album.images[0].url} title={data.album.name} artists={data.artists[0].name} />
       </div>
     </section>
   );
