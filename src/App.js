@@ -6,7 +6,9 @@ function App() {
   return (
     <section>
       <div className="container">
-        <Track url={data.album.images[0].url} title={data.album.name} artists={data.artists[0].name} />
+        {data.map((track) => (
+          <Track url={track.album.images[0].url} title={track.album.name} artists={track.artists[0].name} />
+        ))}
       </div>
     </section>
   );
