@@ -7,7 +7,10 @@ const Track = ({url, title, artist}) => {
           <div className="song-desc">
             <p>{title}</p>
             <p>{artist}</p>
-            <button>Select</button>
+            <button
+          className="buttonSelect"
+          type="button"
+          onClick={console.log("Hello")}>Select</button>
           </div>
         </div>
     );
